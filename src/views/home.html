@@ -21,46 +21,47 @@
 
       <form action="../index.php" method="post">
         <div class="row mb-3" style="padding: 4px; height: 46px;">
-          <input type="text" placeholder="0" class="text-end rounded-3 pe-none fw-bold">
+          <input type="text" placeholder="0" class="text-end rounded-3 pe-none fw-bold" id="display">
         </div>
 
         <div class="five-line row mb-2">
-          <input type="button" value="DEL" class="btn btn-danger col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
-          <input type="button" value="CE" class="btn btn-dark col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
-          <input type="button" value="%" class="btn btn-dark col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
-          <input type="button" value="/" class="btn btn-dark col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="DEL" onclick="getButtonValue('del')" id="del" class="btn btn-danger col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="CE"  onclick="getButtonValue('ce')" id="ce" class="btn btn-dark col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="%"   onclick="getButtonValue('percentage')" id="percentage" class="btn btn-dark col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="/"   onclick="getButtonValue('division')" id="division" class="btn btn-dark col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
         </div>
         <div class="four-line row mb-2">
-          <input type="button" value="7" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
-          <input type="button" value="8" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
-          <input type="button" value="9" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
-          <input type="button" value="*" class="btn btn-dark col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="7" onclick="getButtonValue('seven')" id="seven" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="8" onclick="getButtonValue('eight')" id="eight" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="9" onclick="getButtonValue('nine')" id="nine" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="*" onclick="getButtonValue('multiplication')" id="multiplication" class="btn btn-dark col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
         </div>
         <div class="third-line row mb-2">
-          <input type="button" value="4" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
-          <input type="button" value="5" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
-          <input type="button" value="6" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
-          <input type="button" value="-" class="btn btn-dark col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="4" onclick="getButtonValue('four')" id="four" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="5" onclick="getButtonValue('five')" id="five" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="6" onclick="getButtonValue('six')" id="six" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="-" onclick="getButtonValue('subtraction')" id="subtraction" class="btn btn-dark col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
         </div>
         <div class="second-line row mb-2">
-          <input type="button" value="1" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
-          <input type="button" value="2" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
-          <input type="button" value="3" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
-          <input type="button" value="+" class="btn btn-dark col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="1" onclick="getButtonValue('one')" id="one" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="2" onclick="getButtonValue('second')" id="second" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="3" onclick="getButtonValue('three')" id="three" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="+" onclick="getButtonValue('addition')" id="addition" class="btn btn-dark col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
         </div>
         <div class="first-line row mb-2">
-          <input type="button" value="0" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
-          <input type="button" value="." class="btn btn-dark col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
-          <input type="submit" value="=" class="btn btn-secondary col mb-2 fw-bold">
+          <input type="button" value="0" onclick="getButtonValue('zero')" id="zero" class="btn btn-primary col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="button" value="." onclick="getButtonValue('dot')" id="dot" class="btn btn-dark col mb-2 fw-bold" style="margin: 0 4px; padding: 4px;">
+          <input type="submit" value="=" onclick="getButtonValue('equal')" id="equal" class="btn btn-secondary col mb-2 fw-bold">
         </div>
       </form>
 
       <div class="text-center fw-light">
-        <p>Feito por <a href="#" class="fw-bold" style="text-decoration: none; color: #4f4f4f;">Vitor Figueiredo</a></p>
+        <p>Feito por <a href="https://www.github.com/vitorfigueiredopb" class="fw-bold" style="text-decoration: none; color: #4f4f4f;">Vitor Figueiredo</a></p>
       </div>
     </div>
   </div>
 
+  <script src="../assets/js/fetch.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
     crossorigin="anonymous"></script>
